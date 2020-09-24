@@ -11,7 +11,7 @@ ext {
 
     publishedGroupId = 'com.ekino.utility'
     artifact = 'preference'
-    libraryVersion = '0.0.1'
+    libraryVersion = '0.0.2'
 
     libraryName = 'Preference Utlity'
     libraryDescription = 'Utlity to use shared preference in your app.'
@@ -42,7 +42,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
