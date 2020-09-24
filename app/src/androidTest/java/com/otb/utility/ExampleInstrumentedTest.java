@@ -1,4 +1,4 @@
-package com.otb.utility;
+package com.ekino.utility;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.otb.utility", appContext.getPackageName());
+        assertEquals("com.ekino.utility", appContext.getPackageName());
     }
 }

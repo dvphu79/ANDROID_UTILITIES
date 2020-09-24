@@ -7,33 +7,34 @@ ext {
 
     //Bintray Configuration
     bintrayRepo = 'maven'
-    bintrayName = 'com.otb.utility:preference'
+    bintrayName = 'com.ekino.utility:preference'
 
-    publishedGroupId = 'com.otb.utility'
+    publishedGroupId = 'com.ekino.utility'
     artifact = 'preference'
     libraryVersion = '0.0.1'
 
     libraryName = 'Preference Utlity'
     libraryDescription = 'Utlity to use shared preference in your app.'
 
-    siteUrl = 'https://github.com/mohitrajput987/android-utility'
-    gitUrl = 'https://github.com/mohitrajput987/android-utility.git'
+    siteUrl = 'https://github.com/dvphu79/ANDROID_UTILITIES'
+    gitUrl = 'https://github.com/dvphu79/ANDROID_UTILITIES.git'
 
-    developerId = 'ourtechnobytes'
-    developerName = 'Our Techno Bytes'
-    developerEmail = 'info@ourtechnobytes.com'
+    developerId = 'dvphu79'
+    developerName = 'Do Van Phu'
+    developerEmail = 'dvphu79@gmail.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
 
     //Bintray Credentials
-    Properties properties = new Properties()
-    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//    Properties properties = new Properties()
+//    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//
+//    bintrayUsername = properties.getProperty('BINTRAY_USERNAME')
+//    bintrayUserOrg = properties.getProperty('BINTRAY_ORG')
+//    bintrayApiKey = properties.getProperty('BINTRAY_API_KEY')
 
-    bintrayUsername = properties.getProperty('BINTRAY_USERNAME')
-    bintrayUserOrg = properties.getProperty('BINTRAY_ORG')
-    bintrayApiKey = properties.getProperty('BINTRAY_API_KEY')
 }
 
 android {
@@ -60,4 +61,9 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$supportLibVersion"
 }
 
-apply from: 'bintray.script'
+//apply from: 'bintray.script'
+
+if (project.rootProject.file('local.properties').exists()) {
+    apply from: 'https://raw.githubusercontent.com/wajahatkarim3/JCenter-Gradle-Scripts/master/install.gradle'
+    apply from: 'https://raw.githubusercontent.com/wajahatkarim3/JCenter-Gradle-Scripts/master/bintray.gradle'
+}

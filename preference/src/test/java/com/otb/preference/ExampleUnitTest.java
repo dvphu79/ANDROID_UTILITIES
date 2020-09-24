@@ -1,4 +1,4 @@
-package com.otb.preference;
+package com.ekino.preference;
 
 import org.junit.Test;
 

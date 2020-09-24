@@ -1,12 +1,12 @@
-package com.otb.utility.activity;
+package com.ekino.utility.activity;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.otb.preference.SharedPreferenceUtils;
-import com.otb.utility.R;
+import com.ekino.preference.SharedPreferenceUtils;
+import com.ekino.utility.R;
 
 public class MainActivity extends AppCompatActivity {
     private final static String TAG = MainActivity.class.getSimpleName();

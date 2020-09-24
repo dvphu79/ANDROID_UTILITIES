@@ -1,4 +1,4 @@
-package com.otb.preference;
+package com.ekino.preference;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.otb.preference.test", appContext.getPackageName());
+        assertEquals("com.ekino.preference.test", appContext.getPackageName());
     }
 }

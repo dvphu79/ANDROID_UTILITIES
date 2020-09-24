@@ -1,4 +1,4 @@
-package com.otb.utility;
+package com.ekino.utility;
 
 import org.junit.Test;
 

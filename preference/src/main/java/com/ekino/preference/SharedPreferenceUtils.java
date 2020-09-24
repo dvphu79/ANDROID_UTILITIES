@@ -1,4 +1,4 @@
-package com.otb.preference;
+package com.ekino.preference;
 
 import android.content.Context;
 import android.content.SharedPreferences;
