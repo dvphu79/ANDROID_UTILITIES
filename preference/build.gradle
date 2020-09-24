@@ -27,14 +27,6 @@ ext {
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
 
-    //Bintray Credentials
-//    Properties properties = new Properties()
-//    properties.load(project.rootProject.file('local.properties').newDataInputStream())
-//
-//    bintrayUsername = properties.getProperty('BINTRAY_USERNAME')
-//    bintrayUserOrg = properties.getProperty('BINTRAY_ORG')
-//    bintrayApiKey = properties.getProperty('BINTRAY_API_KEY')
-
 }
 
 android {
@@ -61,9 +53,12 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$supportLibVersion"
 }
 
-//apply from: 'bintray.script'
-
 if (project.rootProject.file('local.properties').exists()) {
-    apply from: 'https://raw.githubusercontent.com/wajahatkarim3/JCenter-Gradle-Scripts/master/install.gradle'
-    apply from: 'https://raw.githubusercontent.com/wajahatkarim3/JCenter-Gradle-Scripts/master/bintray.gradle'
+    apply from: '../config/gradle/install.gradle'
+    apply from: '../config/gradle/bintray.gradle'
 }
+
+//if (project.rootProject.file('local.properties').exists()) {
+//    apply from: 'https://raw.githubusercontent.com/wajahatkarim3/JCenter-Gradle-Scripts/master/install.gradle'
+//    apply from: 'https://raw.githubusercontent.com/wajahatkarim3/JCenter-Gradle-Scripts/master/bintray.gradle'
+//}
